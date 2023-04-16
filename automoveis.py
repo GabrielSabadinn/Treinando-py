@@ -17,7 +17,7 @@ class Bicicleta(Veiculo):
         self.nummarchas = nummarchas
         self.bagageiro = False
         
-    def imprimir(self,):
+    def imprimir(self):
         super().imprimir()
         print(f"Numero de marchas:{self.nummarchas}")
     
@@ -26,14 +26,26 @@ class Automovel(Veiculo):
         super().__init__(marca, qntrodas, modelo)
         self.potenciamotor = potencia_motor
 
+    def imprimir(self):
+        super().imprimir()
+        print(f"Potencia do motor:{self.potencia_motor}")
+
 class Moto(Automovel):
     def __init__(self, marca, qntrodas, modelo, potencia_motor, partida_eletrica):
         super().__init__(marca, qntrodas, modelo, potencia_motor)
         self.partida_eletrica = partida_eletrica
 
+    def imprimir(self):
+        super().imprimir()
+        print(f"Partida Eletrica:{self.partida_eletrica}")
+
 class Carro(Automovel):
     def __init__(self, marca, qntrodas, modelo, potencia_motor,qntdportas):
         super().__init__(marca, qntrodas, modelo, potencia_motor)
         self.qntdportas = qntdportas
+    
+    def imprimir(self):
+        super().imprimir()
+        print(f"Quantidade de porta:{self.qntdportas}")
 
 
